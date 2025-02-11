@@ -1,0 +1,17 @@
+name = "ai-telegram-bot"
+main = "src/index.js"
+compatibility_date = "2023-05-18"
+
+[vars]
+# You'll need to set this secret in the Cloudflare dashboard or via wrangler
+# BOT_TOKEN = "your_telegram_bot_token"
+
+# Set up the AI binding
+[ai]
+binding = "AI"
+
+[[ai.models]]
+name = "@cf/meta/llama-2-7b-chat-int8"
+
+[[ai.models]]
+name = "@cf/stabilityai/stable-diffusion-xl-base-1.0"
